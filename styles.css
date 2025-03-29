@@ -1,0 +1,424 @@
+/* style.css*/
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  background-color: rgb(174, 3, 253);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  
+  
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  margin-right: 20px;
+}
+
+ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+  display: inline-block;
+}
+
+ul li a:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  ul {
+      position: fixed;
+      top: 80px;
+      right: -100%;
+      background-color: green;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s;
+  }
+
+  ul li {
+      margin: 20px 0;
+  }
+
+  ul li a {
+      font-size: 20px;
+  }
+}
+
+#about-me {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 10%;
+  box-sizing: border-box;
+  padding-top: 60px;
+}
+
+.about-me-div {
+  width: 50%;
+  padding: 20px;
+  text-align: left;
+}
+
+.about-me-div h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.about-me-div h1 span {
+  color: rgb(174, 3, 253);
+  font-style: italic;
+}
+
+.about-me-div h2 {
+  font-size: 1.8rem;
+  color: #555;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+  font-weight: normal;
+}
+
+.about-me-div p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+  font-family: 'Arial', sans-serif;
+  text-align: justify;
+  margin-top: 20px; margin-bottom: 50px;
+}
+
+.picture {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+
+.picture img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.about-me-div a.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  background-color: rgb(174, 3, 253);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-me-div a.button:hover {
+  background-color: rgb(139, 2, 202);
+  transform: scale(1.05);
+}
+
+#interests{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.interests-div {
+  width: 75%; 
+  margin: 0 auto; /* Center the table horizontally */
+  border-radius: 15px; /* Rounded edges */
+  overflow: hidden; /* Prevents the rounded corners from being cut off */
+  
+  
+}
+
+.interests-div table {
+  width: 100%; 
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.interests-div th, 
+.interests-div td {
+  padding: 15px;
+  border: 1px solid #ddd; /* Border around each cell */
+}
+
+.interests-div th {
+  background-color: rgb(174, 3, 253);
+  color: white;
+}
+
+.interests-div td {
+  background-color: white;
+  color: black;
+}
+
+.interests-div h1{
+  font-size: 2 rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.interests-div h1 span {
+  color: rgb(174, 3, 253);
+  font-style: italic;
+}
+
+
+
+.interests-div table td{
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+  font-family: 'Arial', sans-serif;
+  
+  margin: 20px;
+}
+
+
+#skills{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 10%;
+  box-sizing: border-box;
+}
+
+.skills-div{
+  width: 100%;
+  padding: 20px;
+  text-align: left;
+}
+
+.skills-div h1{
+  font-size: 2 rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+.skills-div h1 span {
+  color: rgb(174, 3, 253);
+  font-style: italic;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.skill img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.skill img:hover{
+  animation: wiggle 0.3s ease-in-out;
+}
+.skill p {
+ 
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+  font-family: 'Arial', sans-serif;
+  text-align: justify;
+  margin-top: 20px;
+}
+
+#projects {
+  display: flex;
+  justify-content: center;
+  padding: 40px 10%;
+}
+
+.projects-div {
+  width: 95%;
+  background-color: rgb(174, 3, 253); /* Purple background */
+  padding: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.projects-div h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.projects-div h1 span {
+  font-style: italic;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column; /* Stack projects vertically */
+  gap: 0px; /* Add space between the projects */
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  /*background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background for each project */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.project img {
+  width: 200px;
+  height: 200px;
+  margin-right: 30px;
+  border-radius: 50%;
+}
+
+.project-info {
+  color: white;
+}
+
+.project-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.project-info h2 span{
+  font-style: italic;
+  font-size: 0.8rem;
+}
+.project-info p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  
+  margin-bottom: 15px;
+}
+
+.github-link {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.github-link:hover {
+  background-color: rgb(120, 120, 120);
+}
+
+#contact-me {
+  width: 95%;
+  background-color: rgb(174, 3, 253); /* Purple background */
+  color: white;
+  padding: 40px 20px;
+  margin: 40px auto; /* Centers the section */
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-me-div {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.contact-me-div h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact-container h2 span {
+  font-style: italic;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+}
+
+button {
+  background-color: white;
+  color: rgb(174, 3, 253);
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: rgb(140, 0, 200);
+  color: white;
+}
+
+#social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; /* Adjust based on your design */
+}
+
+.social-div {
+  display: flex;
+  gap: 20px; /* Adds space between the icons */
+}
+
+.social-div a img {
+  width: 40px; /* Adjust size */
+  height: 40px;
+  border-radius: 50%; /* Makes them circular if needed */
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-div a img:hover {
+  transform: scale(1.1); /* Slightly enlarges on hover */
+}
